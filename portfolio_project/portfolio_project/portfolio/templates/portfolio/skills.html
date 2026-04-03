@@ -1,0 +1,38 @@
+{% extends 'portfolio/base.html' %}
+
+{% block title %}Skills{% endblock %}
+
+{% block content %}
+<section class="section">
+  <p class="section-label">What I Know</p>
+  <h1 class="section-title">Skills &amp; Technologies</h1>
+  <div class="section-divider"></div>
+
+  {% if skill_categories %}
+  <div class="skills-categories">
+    {% for category, skills in skill_categories.items %}
+    <div>
+      <h2 class="skill-category-title">{{ category }}</h2>
+      <div class="skills-grid">
+        {% for skill in skills %}
+        <div class="skill-item fade-in">
+          <div class="skill-header">
+            <span class="skill-name">{{ skill.name }}</span>
+            <span class="skill-pct">{{ skill.proficiency }}%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" data-pct="{{ skill.proficiency }}" style="width:0%"></div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="card" style="text-align:center;padding:4rem;">
+    <p style="color:var(--text-dim);">No skills added yet. Add skills in the Django admin panel.</p>
+  </div>
+  {% endif %}
+</section>
+{% endblock %}

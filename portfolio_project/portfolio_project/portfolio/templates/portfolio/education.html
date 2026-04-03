@@ -1,0 +1,31 @@
+{% extends 'portfolio/base.html' %}
+
+{% block title %}Education{% endblock %}
+
+{% block content %}
+<section class="section">
+  <p class="section-label">My Background</p>
+  <h1 class="section-title">Education</h1>
+  <div class="section-divider"></div>
+
+  {% if educations %}
+  <div class="timeline">
+    {% for edu in educations %}
+    <div class="timeline-item fade-in">
+      <p class="timeline-year">{{ edu.get_year_range }}</p>
+      <h2 class="timeline-degree">{{ edu.degree }}</h2>
+      <p class="timeline-field">{{ edu.field_of_study }}</p>
+      <p class="timeline-school">{{ edu.school }}</p>
+      {% if edu.description %}
+        <p class="timeline-desc">{{ edu.description }}</p>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="card" style="text-align:center;padding:4rem;">
+    <p style="color:var(--text-dim);">No education records added yet. Add them in the Django admin panel.</p>
+  </div>
+  {% endif %}
+</section>
+{% endblock %}

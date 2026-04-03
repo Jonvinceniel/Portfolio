@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{{ profile.name|default:"My Portfolio" }}{% endblock %} — Portfolio</title>
+  <meta name="description" content="{{ profile.tagline|default:'Personal Portfolio' }}">
+  <link rel="stylesheet" href="{% static 'portfolio/css/style.css' %}">
+  {% block extra_head %}{% endblock %}
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="{% url 'home' %}" class="navbar-brand">
+      {% if profile %}<span>Vince</span>{% else %}<span>My</span>.Portfolio{% endif %}
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="{% url 'home' %}" class="{% if active == 'home' %}active{% endif %}">Home</a></li>
+      <li><a href="{% url 'about' %}" class="{% if active == 'about' %}active{% endif %}">About</a></li>
+      <li><a href="{% url 'skills' %}" class="{% if active == 'skills' %}active{% endif %}">Skills</a></li>
+      <li><a href="{% url 'projects' %}" class="{% if active == 'projects' %}active{% endif %}">Projects</a></li>
+      <li><a href="{% url 'education' %}" class="{% if active == 'education' %}active{% endif %}">Education</a></li>
+      <li><a href="{% url 'contact' %}" class="{% if active == 'contact' %}active{% endif %}">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-wrapper">
+    {% block content %}{% endblock %}
+  </div>
+
+  <footer class="footer">
+    <p>Crafted with <span>♥</span> using Django · {% now "Y" %} {{ profile.name|default:"" }}</p>
+  </footer>
+
+  <script src="{% static 'portfolio/js/main.js' %}"></script>
+</body>
+</html>

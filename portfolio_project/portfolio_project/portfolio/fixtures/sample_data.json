@@ -1,0 +1,130 @@
+[
+  {
+    "model": "portfolio.profile",
+    "pk": 1,
+    "fields": {
+      "name": "Your Full Name",
+      "tagline": "Full-Stack Developer · Problem Solver · Lifelong Learner",
+      "bio": "Hi! I'm a passionate Information Technology student based in the Philippines. I love building web applications that are not only functional but also beautifully designed.\n\nI started programming during my first year of college and quickly fell in love with the process of turning ideas into real, working software. Since then, I've been honing my skills in Python, Django, JavaScript, and database management.\n\nOutside of coding, I enjoy collaborating on open-source projects, reading about new technologies, and helping fellow students learn programming.",
+      "career_goals": "My goal is to become a full-stack developer who builds scalable, user-friendly web applications. I am particularly interested in backend systems, RESTful APIs, and cloud deployment. I aim to contribute to meaningful projects that solve real-world problems in healthcare, education, and sustainability.",
+      "photo": "",
+      "email": "yourname@email.com",
+      "github": "https://github.com/yourusername",
+      "linkedin": "https://linkedin.com/in/yourusername",
+      "twitter": ""
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 1,
+    "fields": { "name": "Python", "category": "languages", "proficiency": 85, "order": 1 }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 2,
+    "fields": { "name": "JavaScript", "category": "languages", "proficiency": 75, "order": 2 }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 3,
+    "fields": { "name": "HTML & CSS", "category": "languages", "proficiency": 90, "order": 3 }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 4,
+    "fields": { "name": "Django", "category": "frameworks", "proficiency": 80, "order": 1 }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 5,
+    "fields": { "name": "Bootstrap", "category": "frameworks", "proficiency": 85, "order": 2 }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 6,
+    "fields": { "name": "MySQL", "category": "databases", "proficiency": 75, "order": 1 }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 7,
+    "fields": { "name": "SQLite", "category": "databases", "proficiency": 80, "order": 2 }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 8,
+    "fields": { "name": "Git & GitHub", "category": "tools", "proficiency": 80, "order": 1 }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 9,
+    "fields": { "name": "PythonAnywhere", "category": "tools", "proficiency": 70, "order": 2 }
+  },
+  {
+    "model": "portfolio.project",
+    "pk": 1,
+    "fields": {
+      "title": "Personal Portfolio Website",
+      "description": "A dynamic personal portfolio website built with Django showcasing my skills, projects, and education. Features a Django admin panel for content management, contact form with database storage, responsive design, and deployment on PythonAnywhere.",
+      "technologies": "Django, Python, HTML, CSS, SQLite, PythonAnywhere",
+      "github_link": "https://github.com/yourusername/portfolio",
+      "live_link": "",
+      "image": "",
+      "featured": true,
+      "order": 1
+    }
+  },
+  {
+    "model": "portfolio.project",
+    "pk": 2,
+    "fields": {
+      "title": "Student Grade Management System",
+      "description": "A web-based grade management system for teachers to record, calculate, and track student grades. Supports multiple subjects, automatic GPA computation, and PDF report generation.",
+      "technologies": "Django, Python, MySQL, Bootstrap, HTML, CSS",
+      "github_link": "https://github.com/yourusername/grade-system",
+      "live_link": "",
+      "image": "",
+      "featured": true,
+      "order": 2
+    }
+  },
+  {
+    "model": "portfolio.project",
+    "pk": 3,
+    "fields": {
+      "title": "Library Book Borrowing System",
+      "description": "A digital library management system that tracks book inventory, borrower records, and due dates. Includes overdue notifications and a search feature for finding books by title, author, or genre.",
+      "technologies": "Python, Django, SQLite, HTML, CSS, JavaScript",
+      "github_link": "https://github.com/yourusername/library-system",
+      "live_link": "",
+      "image": "",
+      "featured": true,
+      "order": 3
+    }
+  },
+  {
+    "model": "portfolio.education",
+    "pk": 1,
+    "fields": {
+      "school": "Your University / College Name",
+      "degree": "Bachelor of Science",
+      "field_of_study": "Information Technology",
+      "year_start": 2022,
+      "year_end": null,
+      "description": "Currently enrolled and studying core subjects in software development, networking, database management, and web technologies. Active member of the IT Society.",
+      "order": 1
+    }
+  },
+  {
+    "model": "portfolio.education",
+    "pk": 2,
+    "fields": {
+      "school": "Your Senior High School",
+      "degree": "Senior High School Diploma",
+      "field_of_study": "STEM Strand",
+      "year_start": 2020,
+      "year_end": 2022,
+      "description": "Graduated with honors. Took subjects focused on mathematics, science, and computing which built a strong foundation for my IT degree.",
+      "order": 2
+    }
+  }
+]
